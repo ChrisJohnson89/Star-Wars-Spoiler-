@@ -1,14 +1,14 @@
-//Prevent spoilerss
-//Hide SPoilers and reveal them through user interaction.
+//Prevent spoilerphobes from seeing spoilers
+//Solution: Hide spoilers and reveal them through user interaction
 
-//1. hide spoiler
+//1, Hide spoiler
 $(".spoiler span").hide();
-//2. add a button
-$(".spoiler").append("<button>Reveal Spoiler</button>");
-//3. when button pressed
+//2, Add a button
+$(".spoiler").append("<button>Reveal Spoiler!</button>");
+//3, When button pressed
 $("button").click(function(){
-  //we wan't to show spoiler
-  $(".spoiler span").show();
-  // get rid of button
+  //3.1, Show spoiler next to the button clicked
+  $(this).prev().show();
+  //3.2, Get rid of button
   $(this).remove();
 });
